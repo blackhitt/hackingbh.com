@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlackHat-Abhi</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: monospace;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #66ff33;
+            margin: 20px 0;
+        }
+
+        #img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 200px;
+            height: 200px;
+            margin: 20px auto;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 0 30px 5px #66ff33, 0 0 20px 5px #66ff33;
+        }
+
+        #img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        #About {
+            text-align: center;
+            color: #66ff33;
+            height: 300px;
+            margin: 20px;
+        }
+
+        .container {
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        .contact-us {
+            background-color: white;
+            color: black;
+            font-size: 16px;
+            width: 300px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 0 10px 5px #ff1f1f, 0 0 10px 5px #ff1f1f;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .contact-us:hover {
+            box-shadow: 0 0 30px 5px #66ff33, 0 0 20px 5px #66ff33;
+            transform: translate(10px, -10px);
+        }
+
+        hr {
+            border: 1px solid #29ffe2;
+            margin: 20px 0;
+        }
+
+        audio {
+            display: block;
+            margin: 10px auto; /* Menempatkan audio di tengah */
+            width: 300px; /* Atur lebar audio sesuai kebutuhan */
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CODE-X</h1>
+
+    <div id="img">
+        <img src="6314230919241777860.jpg" alt="Abhi">
+    </div>
+
+    <audio controls>
+        <source src="" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <p id="About">Hello friends! I am an Ethical & BlackHat hacker, whose mission is to bring improvement in the field of technology and cybersecurity, but in a somewhat different way. My name is Abhi and I strive to secure systems and networks using my skills.</p>
+
+    <div class="container">
+        <button class="contact-us" onclick="openLink('https://t.me/+i1DQKamaB4w5NmFl')"><b>Telegram</b></button>
+    </div>
+    <div class="container">
+        <button class="contact-us" onclick="openLink('https://whatsapp.com/')"><b>Join Whatsapp Channel</b></button>
+    </div>
+    <div class="container">
+        <button class="contact-us" onclick="openLink('https://chat.whatsapp.com')"><b>Join Whatsapp Group</b></button>
+    </div>
+    <div class="container">
+        <button class="contact-us" onclick="openLink('https://instagram.com/')"><b>Follow On Instagram</b></button>
+    </div>
+    <div class="container">
+        <button class="contact-us" onclick="openLink('https://github.com/')"><b>Follow On Github</b></button>
+    </div>
+
+    <hr>
+
+    <script>
+        const text = document.getElementById('About').innerHTML;
+        document.getElementById('About').innerHTML = '';
+
+        let i = 0;
+        const typingEffect = setInterval(() => {
+            if (i <= text.length) {
+                document.getElementById('About').innerHTML = text.substring(0, i);
+                i++;
+            } else {
+                clearInterval(typingEffect);
+            }
+        }, 50);
+
+        function openLink(url) {
+            window.location.href = url;
+        }
+    </script>
+
+</body>
+</html>
